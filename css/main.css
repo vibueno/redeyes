@@ -8,8 +8,9 @@
 
 body {
   display: grid;
+  grid-template-columns: repeat(5, 20%);
   border: 1px solid #ccc;
-  grid-template-columns: 20% 30% 50%;
+  font-size: 15px;
 }
 
 header,
@@ -24,19 +25,32 @@ article {
 
 header,
 main,
-footer {
+footer,
+nav {
   display: grid;
-  grid-column: 1/4;
+  grid-column: 1/6;
 }
 
-nav.nav-horizontal {
-  grid-column: 1/4;
+nav {
+  font-size: 0.8em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+nav.nav-horizontal ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
 }
 
 nav.nav-vertical {
   grid-column: 1/2;
 }
 
+nav.nav-vertical ul {
+  list-style: none;
+}
+
 article {
-  grid-column: 2/4;
+  grid-column: 2/6;
 }

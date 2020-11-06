@@ -27,4 +27,4 @@ function showMenus() {
 
 window.onload = function(){
   showMenus();
-}
+};
