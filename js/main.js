@@ -16,7 +16,6 @@ function showMenus() {
 
   const SIDE_MENU = TPL_MENU.content.cloneNode(true);
   SIDE_NAV.appendChild(SIDE_MENU);
-
 }
 
 /*
