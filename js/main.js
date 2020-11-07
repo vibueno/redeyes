@@ -1,8 +1,8 @@
 import {
   TPL_MENU,
   FOOTER_NAV,
-  HEADER_NAV,
-  SIDE_NAV } from './constants.js';
+  HEADER_NAV
+} from './constants.js';
 
 /**
  * @description Shows the menus based on a template.
@@ -13,9 +13,6 @@ function showMenus() {
 
   const FOOTER_MENU = TPL_MENU.content.cloneNode(true);
   FOOTER_NAV.appendChild(FOOTER_MENU);
-
-  const SIDE_MENU = TPL_MENU.content.cloneNode(true);
-  SIDE_NAV.appendChild(SIDE_MENU);
 }
 
 /*
