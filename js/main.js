@@ -8,8 +8,10 @@ import {
  * @description Shows the menus based on a template.
  */
 function showMenus() {
+  /*
   const HEADER_MENU = TPL_MENU.content.cloneNode(true);
   HEADER_NAV.appendChild(HEADER_MENU);
+  */
 
   const FOOTER_MENU = TPL_MENU.content.cloneNode(true);
   FOOTER_NAV.appendChild(FOOTER_MENU);
