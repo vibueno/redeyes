@@ -7,23 +7,24 @@
  */
 
 body {
-  display: grid;
   grid-template-columns: repeat(5, 20%);
+  display: grid;
+  overflow-x: hidden;
   margin: 0 auto 0 auto;
-  padding: 0 5px 0 5px;
   max-width: 1500px;
   height: 100%;
   min-height: 100%;
+  padding: 10px;
   box-sizing: border-box;
-  font-size: 15px;
-  overflow-x: hidden;
-  object-fit: contain;
+  background-color: #cbcede;
+  font-size: 21px;
 }
 
 header,
 .header-content,
 main,
 footer,
+.footer-content,
 nav,
 div,
 section,
@@ -34,7 +35,7 @@ article {
 header,
 main {
   max-width: 1500px;
-  margin: 0 0 10% 0;
+  margin: 0;
 }
 
 header,
@@ -43,36 +44,38 @@ main,
 footer,
 .footer-content,
 nav {
-  display: grid;
   grid-column: 1/6;
+  display: grid;
 }
 
 header {
   position: relative;
-  margin: 0 0 50px 0;
   height: 200px;
-  background-color: #000;
   font-size: 1.6em;
   color: #fff;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 79%);
+}
+
+.header-bg {
+  position: relative;
+  height: 50%;
   background: repeating-linear-gradient(
-    45deg,
+    135deg,
     #ffee35,
-    #ffee35 15px,
-    #000 15px,
-    #000 30px
+    #ffee35 30px,
+    #000 30px,
+    #000 60px
   );
+  font-size: 1.6em;
+  color: #fff;
 }
 
 .header-content {
   position: absolute;
   top: 20px;
+  bottom: 50px;
   left: 20px;
   right: 20px;
-  bottom: 50px;
   border: 5px solid #fff;
-  border-left: 0;
-  border-right: 0;
   background-color: #000;
   text-align: center;
 }
@@ -82,24 +85,20 @@ h1 {
   margin: 0.5em auto 0 auto;
   height: auto;
   font-size: 1.7em;
-  background: #000;
 }
 
 nav {
   margin: 0;
-  height: auto;
   padding: 0;
   font-size: 0.8em;
   text-align: center;
   text-transform: uppercase;
-  background: #000;
 }
 
 nav.nav-horizontal ul {
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: grid;
   margin: 0;
-  height: auto;
   padding: 0;
   list-style-type: none;
 }
@@ -110,14 +109,30 @@ h2 {
 }
 
 article {
+  filter: drop-shadow(3px 3px 3px rgba(50, 50, 0, 0.5));
+  min-height: 400px;
+}
+
+.article-content {
   grid-column: 2/6;
   margin: 0 1em 1em 1em;
+  padding: 20px;
+  min-height: 400px;
+  background-color: #fff;
+}
+
+.article-content.odd {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.article-content.even {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 
 .news-picture-container {
   position: relative;
   grid-column: 2/4;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .news-picture-container:after {
@@ -145,38 +160,42 @@ article {
 .news-picture {
   display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   height: 100%;
 }
 
 footer {
   position: relative;
-  z-index: 0;
-  clip-path: polygon(0 0, 100% 21%, 100% 100%, 0 100%);
-  height: 150px;
-  background: repeating-linear-gradient(
-    45deg,
-    #ffee35,
-    #ffee35 15px,
-    #000 15px,
-    #000 30px
-  );
-  font-size: 1.3em;
+  margin: 0;
+  height: 200px;
+  font-size: 1.6em;
   color: #fff;
-  align-items: center;
+}
+
+.footer-bg {
+  position: relative;
+  z-index: 0;
+  align-self: end;
+  height: 50%;
+  background: repeating-linear-gradient(
+    135deg,
+    #e6523e,
+    #e6523e 30px,
+    #000 30px,
+    #000 60px
+  );
+  font-size: 1.6em;
+  color: #fff;
 }
 
 .footer-content {
   position: absolute;
-  align-items: center;
+  z-index: 1;
   top: 50px;
-  left: 10px;
-  right: 10px;
-  bottom: 11px;
-  height: 50px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
   border: 5px solid #fff;
-  border-left: 0;
-  border-right: 0;
   background-color: #000;
   text-align: center;
 }
