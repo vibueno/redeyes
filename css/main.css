@@ -18,18 +18,7 @@ body {
   box-sizing: border-box;
   background-color: #cbcede;
   font-size: 15px;
-}
-
-header,
-.header-content,
-main,
-footer,
-.footer-content,
-nav,
-div,
-section,
-article {
-  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header,
@@ -39,6 +28,7 @@ main {
 
 header,
 .header-content,
+.header-subtitle,
 h1,
 main,
 footer,
@@ -49,6 +39,7 @@ article,
 h2,
 .news-picture-container,
 .news-text {
+  box-sizing: border-box;
   grid-column: 1/6;
   display: grid;
 }
@@ -83,13 +74,20 @@ header {
   right: 10px;
   border: 3px solid #fff;
   background-color: #000;
+  font-family: 'Special Elite', cursive;
   text-align: center;
 }
 
 h1 {
-  margin: 0.5em auto 0 auto;
+  transform: rotate(-2deg);
+  margin: 0.5em auto 0.2em auto;
   height: auto;
-  font-size: 1.7em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.header-subtitle {
+
 }
 
 nav {
