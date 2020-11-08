@@ -21,6 +21,24 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/**
+ *
+ * Hamburguer menu
+ *
+ */
+
+.hamburger {
+  position: fixed;
+  z-index: 30;
+  top: 25px;
+  left: 30px;
+  opacity: 0.75;
+  border-radius: 5px;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
 header,
 main {
   max-width: 1500px;
