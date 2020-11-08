@@ -3,3 +3,72 @@
  * - ascending min-width
  * - ascending max-width
  */
+
+ @media screen and (min-width:800px) {
+
+  body {
+    font-size: 21px;
+  }
+
+  header {
+    margin: 0 0 200px 0;
+    font-size: 1.6em;
+  }
+
+  .header-content {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    border: 5px solid #fff;
+  }
+
+  article {
+    height: 110%;
+  }
+
+  .article-content {
+    margin: 0 5% 10% 5%;
+  }
+
+  .article-content.odd {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .article-content.even {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  }
+
+  .news-picture-container {
+    display: inline;
+    max-width: 350px;
+  }
+
+  .news-picture {
+    max-width: 350px;
+  }
+
+  .news-text {
+    display: inline;
+  }
+
+  .news-picture-container.left {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+
+  .news-picture-container.right {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  footer {
+    font-size: 1.6em;
+  }
+
+  .footer-content {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    border: 5px solid #fff;
+  }
+}
