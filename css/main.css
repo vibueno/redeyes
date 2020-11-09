@@ -24,12 +24,20 @@ body {
 .hamburger {
   position: fixed;
   z-index: 30;
+  display: inline-block;
   top: 27px;
-  left: 27px;
   border: 2px solid #000;
   width: 35px;
   height: auto;
   cursor: pointer;
+}
+
+.hamburger.in-header {
+  left: 27px;
+}
+
+.hamburger.aligned-left {
+  left: 20px;
 }
 
 .hamburger.top {
