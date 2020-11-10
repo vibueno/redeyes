@@ -5,7 +5,6 @@
 import {
   BODY,
   SEL_HEADER_CONTENT,
-  TPL_MENU,
   SEL_HAMBURGER,
   HAMBURGER,
   HAMBURGER_CLASS_TOP,
@@ -13,7 +12,6 @@ import {
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
   SEL_FOOTER_CONTENT,
-  FOOTER_NAV,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,
   BACK_TO_TOP_CLASS_VISIBLE,
@@ -23,19 +21,6 @@ import {
 } from './constants.js';
 
 let functions = {
-
-  /**
-   * @description Shows the menus based on a template.
-   */
-  showMenus: function() {
-    /*
-    const HEADER_MENU = TPL_MENU.content.cloneNode(true);
-    HEADER_NAV.appendChild(HEADER_MENU);
-    */
-
-    const FOOTER_MENU = TPL_MENU.content.cloneNode(true);
-    FOOTER_NAV.appendChild(FOOTER_MENU);
-  },
 
   /**
    * @description Sets hamburger button style and position

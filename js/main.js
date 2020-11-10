@@ -9,16 +9,13 @@ import { functions } from './functions.js';
 window.onload = function(){
 
   /**
-   * @description Checks on each scroll whether hamburger menu should be modified
+   * @description window scroll & resize events handling
    *
    */
   ['scroll','resize'].forEach( function(event) {
-      window.addEventListener(event, function() {
-    functions.setHamburger();
-    functions.setBackToTop();
-  }, false);
+    window.addEventListener(event, function() {
+      functions.setHamburger();
+      functions.setBackToTop();
+    }, false);
   });
-
-  functions.showMenus();
-
 };

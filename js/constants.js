@@ -5,9 +5,6 @@
 const BODY = document.body;
 
 const SEL_HEADER_CONTENT = 'header-content';
-const HEADER_NAV = document.getElementById('header-nav');
-
-const TPL_MENU = document.getElementById('template-menu');
 
 const SEL_HAMBURGER = 'hamburger-menu';
 const HAMBURGER = document.getElementById('hamburger-menu');
@@ -18,7 +15,6 @@ const HAMBURGER_CLASS_IN_HEADER = 'in-header';
 const HAMBURGER_CLASS_OUT_HEADER = 'out-header';
 
 const SEL_FOOTER_CONTENT = 'footer-content';
-const FOOTER_NAV = document.getElementById('footer-nav');
 
 const SEL_BACK_TO_TOP = 'back-to-top';
 
@@ -31,8 +27,6 @@ const BACK_TO_TOP_CLASS_OUT_FOOTER = 'out-footer';
 export {
   BODY,
   SEL_HEADER_CONTENT,
-  HEADER_NAV,
-  TPL_MENU,
   SEL_HAMBURGER,
   HAMBURGER,
   HAMBURGER_CLASS_TOP,
@@ -40,7 +34,6 @@ export {
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
   SEL_FOOTER_CONTENT,
-  FOOTER_NAV,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,
   BACK_TO_TOP_CLASS_VISIBLE,
