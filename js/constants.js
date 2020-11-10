@@ -15,7 +15,7 @@ const HAMBURGER_CLASS_TOP = 'top';
 const HAMBURGER_CLASS_BOTTOM = 'bottom';
 
 const HAMBURGER_CLASS_IN_HEADER = 'in-header';
-const HAMBURGER_CLASS_ALIGN_LEFT = 'aligned-left';
+const HAMBURGER_CLASS_OUT_HEADER = 'out-header';
 
 const FOOTER_NAV = document.getElementById('footer-nav');
 
@@ -29,6 +29,6 @@ export {
   HAMBURGER_CLASS_TOP,
   HAMBURGER_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
-  HAMBURGER_CLASS_ALIGN_LEFT,
+  HAMBURGER_CLASS_OUT_HEADER,
   FOOTER_NAV
 };

@@ -11,7 +11,7 @@ import {
   HAMBURGER_CLASS_TOP,
   HAMBURGER_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
-  HAMBURGER_CLASS_ALIGN_LEFT,
+  HAMBURGER_CLASS_OUT_HEADER,
   FOOTER_NAV
 } from './constants.js';
 
@@ -52,11 +52,11 @@ let functions = {
     //Sets position of hamburger icon
     if (functions.getNodeViewportTop(SEL_HAMBURGER)>functions.getNodeViewportBottom(SEL_HEADER_CONTENT)){
       HAMBURGER.classList.remove(HAMBURGER_CLASS_IN_HEADER);
-      HAMBURGER.classList.add(HAMBURGER_CLASS_ALIGN_LEFT);
+      HAMBURGER.classList.add(HAMBURGER_CLASS_OUT_HEADER);
     }
 
     else if (functions.getNodeViewportBottom(SEL_HAMBURGER)<functions.getNodeViewportBottom(SEL_HEADER_CONTENT)){
-      HAMBURGER.classList.remove(HAMBURGER_CLASS_ALIGN_LEFT);
+      HAMBURGER.classList.remove(HAMBURGER_CLASS_OUT_HEADER);
       HAMBURGER.classList.add(HAMBURGER_CLASS_IN_HEADER);
     }
 
