@@ -98,4 +98,14 @@
     height: 170px;
     border: 5px solid #fff;
   }
+
+  .back-to-top.in-footer {
+    bottom: 43px;
+    right: 43px;
+  }
+
+  .back-to-top.out-footer {
+    bottom: 30px;
+    right: 30px;
+  }
 }

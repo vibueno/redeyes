@@ -205,3 +205,33 @@ footer {
   background-color: #000;
   text-align: center;
 }
+
+.back-to-top {
+  position: fixed;
+  z-index: 31;
+  display: inline-block;
+  border: 2px solid #000;
+  width: 35px;
+  height: auto;
+  background-color: #e6523e;
+  cursor: pointer;
+}
+
+.back-to-top.in-footer {
+  bottom: 27px;
+  right: 27px;
+}
+
+.back-to-top.out-footer {
+  right: 20px;
+  bottom: 15px;
+}
+
+.back-to-top.visible {
+  display: block;
+  opacity: 1;
+}
+
+.back-to-top.hidden {
+  opacity: 0;
+}

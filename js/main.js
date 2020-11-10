@@ -12,8 +12,11 @@ window.onload = function(){
    * @description Checks on each scroll whether hamburger menu should be modified
    *
    */
-  window.addEventListener('scroll', function() {
+  ['scroll','resize'].forEach( function(event) {
+      window.addEventListener(event, function() {
     functions.setHamburger();
+    functions.setBackToTop();
+  }, false);
   });
 
   functions.showMenus();
