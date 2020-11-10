@@ -105,6 +105,23 @@ let functions = {
   getNodeViewportBottom: function (id) {
     const NODE = document.getElementById(id);
     return NODE.getBoundingClientRect().bottom;
+  },
+
+  /**
+   * @description Scrolls to the set position
+   * @param {Number} position Vertical position to scroll to.
+   *
+   */
+  scrollTo: function (position) {
+    window.scroll(0, position);
+  },
+
+  /**
+   * @description Scrolls to the top of the page
+   *
+   */
+  scrollToTop: function () {
+    window.scroll(0, 0);
   }
 
 };

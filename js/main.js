@@ -1,4 +1,6 @@
+import { BACK_TO_TOP } from './constants.js';
 import { functions } from './functions.js';
+
 
 /*
  *
@@ -18,4 +20,13 @@ window.onload = function(){
       functions.setBackToTop();
     }, false);
   });
+
+  /**
+   * @description click event of the button Back to top.
+   */
+  BACK_TO_TOP.addEventListener('click',(
+    function() {
+      functions.scrollToTop();
+    })
+  );
 };
