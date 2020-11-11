@@ -6,9 +6,25 @@
  *
  */
 
- * {
+ /*
+  *
+  * Variables
+  *
+  */
+
+:root {
+  --site-max-width: 1500px;
+  --yellow: #ffee35;
+  --red: #e6523e;
+  --black: #000;
+  --white: #fff;
+  --color-bg: #cbcede;
+  --color-shadow: rgba(50, 50, 0, 0.5);
+}
+
+* {
   box-sizing: border-box;
- }
+}
 
 html {
   scroll-behavior: smooth;
@@ -19,12 +35,12 @@ body {
   display: grid;
   overflow-x: hidden;
   margin: 0 auto 0 auto;
-  max-width: 1500px;
+  max-width: var(--site-max-width);
   height: 100%;
   min-height: 100%;
   padding: 10px;
   box-sizing: border-box;
-  background-color: #cbcede;
+  background-color: var(--color-bg);
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -33,7 +49,7 @@ body {
   position: fixed;
   z-index: 30;
   display: inline-block;
-  border: 2px solid #000;
+  border: 2px solid var(--black);
   width: 35px;
   height: auto;
   cursor: pointer;
@@ -50,16 +66,16 @@ body {
 }
 
 .hamburger.top {
-  background-color: #ffee35;
+  background-color: var(--yellow);
 }
 
 .hamburger.bottom {
-  background-color: #e6523e;
+  background-color: var(--red);
 }
 
 header,
 main {
-  max-width: 1500px;
+  max-width: var(--site-max-width);
 }
 
 header,
@@ -84,7 +100,7 @@ header {
   align-items: start;
   margin: 0 0 150px 0;
   font-size: 1em;
-  color: #fff;
+  color: var(--white);
 }
 
 .header-bg {
@@ -94,10 +110,10 @@ header {
   height: 65px;
   background: repeating-linear-gradient(
     135deg,
-    #ffee35,
-    #ffee35 30px,
-    #000 30px,
-    #000 60px
+    var(--yellow),
+    var(--yellow) 30px,
+    var(--black) 30px,
+    var(--black) 60px
   );
 }
 
@@ -107,10 +123,10 @@ header {
   top: 10px;
   right: 10px;
   left: 10px;
-  box-shadow: 3px 3px 2px rgba(50, 50, 0, 0.5);
-  border: 3px solid #fff;
+  box-shadow: 3px 3px 2px var(--color-shadow);
+  border: 3px solid var(--white);
   height: 110px;
-  background-color: #000;
+  background-color: var(--black);
   font-family: 'Special Elite', cursive;
   text-align: center;
 }
@@ -132,9 +148,9 @@ nav ul li {
 }
 
 nav ul li:hover {
-  background-color: #f8e734;
+  background-color: var(--yellow);
   font-size: 1.2em;
-  color: #000;
+  color: var(--black);
 }
 
 h3 {
@@ -143,13 +159,13 @@ h3 {
 }
 
 article {
-  filter: drop-shadow(3px 3px 2px rgba(50, 50, 0, 0.5));
+  filter: drop-shadow(3px 3px 2px var(--color-shadow));
 }
 
 .article-content {
   margin: 0 11px 8% 11px;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .news-picture-container {
@@ -180,7 +196,7 @@ footer {
   align-items: end;
   margin: 125px 0 0 0;
   font-size: 1em;
-  color: #fff;
+  color: var(--white);
 }
 
 .footer-bg {
@@ -190,10 +206,10 @@ footer {
   height: 65px;
   background: repeating-linear-gradient(
     135deg,
-    #e6523e,
-    #e6523e 30px,
-    #000 30px,
-    #000 60px
+    var(--red),
+    var(--red) 30px,
+    var(--black) 30px,
+    var(--black) 60px
   );
 }
 
@@ -204,9 +220,9 @@ footer {
   bottom: 10px;
   left: 10px;
   height: 110px;
-  box-shadow: 3px 3px 2px rgba(50, 50, 0, 0.5);
-  border: 3px solid #fff;
-  background-color: #000;
+  box-shadow: 3px 3px 2px var(--color-shadow);
+  border: 3px solid var(--white);
+  background-color: var(--black);
   text-align: center;
 }
 
@@ -214,10 +230,10 @@ footer {
   position: fixed;
   z-index: 31;
   display: inline-block;
-  border: 2px solid #000;
+  border: 2px solid var(--black);
   width: 35px;
   height: auto;
-  background-color: #e6523e;
+  background-color: var(--red);
   cursor: pointer;
 }
 
