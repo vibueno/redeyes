@@ -54,22 +54,43 @@ let functions = {
   },
 
   /**
+   * @description Shows the back to top button
+   */
+  showBackToTop: function () {
+    BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_HIDDEN);
+    BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_VISIBLE);
+  },
+
+  /**
+   * @description Hides the back to top button
+   */
+  hideBackToTop: function () {
+    BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_VISIBLE);
+    BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_HIDDEN);
+  },
+
+  /**
    * @description Sets the visibility of the back to top button
    */
-  setBackToTop: function () {
+  setBackToTopVisibility: function () {
+
     if (((window.innerHeight + window.pageYOffset) >= (BODY.offsetHeight/1.75))) {
       window.setTimeout( function() {
-        BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_HIDDEN);
-        BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_VISIBLE);
+        functions.showBackToTop();
       }, 100);
 
     }
     else {
       window.setTimeout( function() {
-        BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_VISIBLE);
-        BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_HIDDEN);
+        functions.hideBackToTop();
       }, 100);
     }
+  },
+
+  /**
+   * @description Sets the position of the back to top button
+   */
+  setBackToTopPosition: function () {
 
     //Sets position of back to top button
     if (functions.getNodeViewportBottom(SEL_BACK_TO_TOP)<functions.getNodeViewportTop(SEL_FOOTER_CONTENT)){
@@ -81,7 +102,6 @@ let functions = {
       BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_OUT_FOOTER);
       BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_IN_FOOTER);
     }
-
   },
 
   /**
@@ -108,20 +128,11 @@ let functions = {
   },
 
   /**
-   * @description Scrolls to the set position
-   * @param {Number} position Vertical position to scroll to.
-   *
-   */
-  scrollTo: function (position) {
-    window.scroll(0, position);
-  },
-
-  /**
    * @description Scrolls to the top of the page
    *
    */
   scrollToTop: function () {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   }
 
 };

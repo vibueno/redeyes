@@ -1,7 +1,6 @@
 import { BACK_TO_TOP } from './constants.js';
 import { functions } from './functions.js';
 
-
 /*
  *
  * Initial calls
@@ -10,14 +9,25 @@ import { functions } from './functions.js';
 
 window.onload = function(){
 
+  let backtoTopPushed = false;
+
   /**
    * @description window scroll & resize events handling
    *
    */
   ['scroll','resize'].forEach( function(event) {
     window.addEventListener(event, function() {
+
+      if (backtoTopPushed){
+        backtoTopPushed = (window.pageYOffset!==0);
+      }
+
+      if (!backtoTopPushed){
+        functions.setBackToTopPosition();
+        functions.setBackToTopVisibility();
+      }
+
       functions.setHamburger();
-      functions.setBackToTop();
     }, false);
   });
 
@@ -26,6 +36,8 @@ window.onload = function(){
    */
   BACK_TO_TOP.addEventListener('click',(
     function() {
+      backtoTopPushed = true;
+      functions.hideBackToTop();
       functions.scrollToTop();
     })
   );

@@ -10,14 +10,12 @@ const SEL_HAMBURGER = 'hamburger-menu';
 const HAMBURGER = document.getElementById('hamburger-menu');
 const HAMBURGER_CLASS_TOP = 'top';
 const HAMBURGER_CLASS_BOTTOM = 'bottom';
-
 const HAMBURGER_CLASS_IN_HEADER = 'in-header';
 const HAMBURGER_CLASS_OUT_HEADER = 'out-header';
 
 const SEL_FOOTER_CONTENT = 'footer-content';
 
 const SEL_BACK_TO_TOP = 'back-to-top';
-
 const BACK_TO_TOP = document.getElementById('back-to-top');
 const BACK_TO_TOP_CLASS_VISIBLE = 'visible';
 const BACK_TO_TOP_CLASS_HIDDEN = 'hidden';
