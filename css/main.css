@@ -231,9 +231,8 @@ footer {
 
 .back-to-top.visible {
   display: block;
-  opacity: 1;
 }
 
 .back-to-top.hidden {
-  opacity: 0;
+  display: none;
 }
