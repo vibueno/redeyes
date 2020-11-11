@@ -11,6 +11,9 @@ window.onload = function(){
 
   let backtoTopPushed = false;
 
+  functions.setBackToTopPosition();
+  functions.setBackToTopVisibility();
+
   /**
    * @description window scroll & resize events handling
    *
