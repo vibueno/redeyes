@@ -22,6 +22,11 @@
   h2 {
     font-size: 0.9em;
   }
+
+  footer {
+    font-size: 0.8em;
+  }
+
 }
 
 @media screen and (min-width:500px) {
@@ -31,10 +36,6 @@
 
   h2 {
     font-size: 1.25em;
-  }
-
-  footer {
-    font-size: 0.8em;
   }
 
 }
@@ -152,10 +153,6 @@
     margin: 0 20px 20px 20px;
     height: 170px;
     border: 5px solid var(--white);
-  }
-
-  footer {
-    font-size: 0.75em;
   }
 
   .footer-credits {

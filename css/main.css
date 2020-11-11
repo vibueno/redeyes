@@ -86,7 +86,6 @@ main,
 footer,
 .footer-content,
 .footer-credits,
-footer ul,
 .footer-bg,
 nav,
 article,
@@ -197,19 +196,19 @@ footer {
   position: relative;
   align-items: end;
   margin: 0.8em 0 0 0;
-  font-size: 0.7em;
+  font-size: 0.75em;
   color: var(--white);
 }
 
 footer ul {
-  padding: 0;
+  padding: 0 0 0.7em 0;
   width: 100%;
   margin: 0;
 }
 
 footer li {
   display: inline;
-  margin: 0 0;
+  margin: 0 1em 0 0;
   text-align: center;
 }
 
