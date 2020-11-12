@@ -209,13 +209,13 @@
   }
 
   .back-to-top.in-footer {
-    bottom: 43px;
     right: 43px;
+    bottom: 43px;
   }
 
   .back-to-top.out-footer {
-    bottom: 30px;
     right: 30px;
+    bottom: 30px;
   }
 }
 
@@ -227,12 +227,12 @@
 
 @media screen and (min-width:1500px) {
   .back-to-top.in-footer {
-    bottom: 27px;
     right: 27px;
+    bottom: 27px;
   }
 
   .back-to-top.out-footer {
-    bottom: 27px;
     right: 27px;
+    bottom: 27px;
   }
 }
