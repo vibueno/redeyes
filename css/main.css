@@ -3,15 +3,14 @@
  * Sizes in this stylesheet are optimized for mini smarphones.
  * We use the file responsive.css to build up on this and
  * make the page look good on bigger devices too
+ *
+ */
 
-* */
-
-
- /*
-  *
-  * Variables
-  *
-  */
+/*
+ *
+ * Variables
+ *
+ */
 
 :root {
   --site-max-width: 1500px;
@@ -83,9 +82,9 @@ body {
 
 .x {
   position: fixed;
+  z-index: 6;
   top: 24px;
   left: 24px;
-  z-index: 6;
   width: 33px;
   height: auto;
   cursor: pointer;
@@ -139,8 +138,8 @@ header {
 
 .header-content {
   position: relative;
-  display: inline-block;
   z-index: 1;
+  display: inline-block;
   margin: 10px 10px 0 10px;
   box-shadow: 3px 3px 2px var(--color-shadow);
   border: 3px solid var(--white);
@@ -162,9 +161,9 @@ h2 {
 }
 
 nav {
+  position: fixed;
   z-index: 30;
   align-content: center;
-  position: fixed;
   top: 0;
   left: 0;
   -webkit-transform: translate(-800px, 0);
@@ -209,7 +208,7 @@ nav ul {
   color: var(--yellow);
 }
 
- .menu-entry.bottom:hover {
+.menu-entry.bottom:hover {
   color: var(--red);
 }
 
