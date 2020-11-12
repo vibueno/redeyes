@@ -8,8 +8,8 @@ const SEL_HEADER_CONTENT = 'header-content';
 
 const SEL_HAMBURGER = 'hamburger-menu';
 const HAMBURGER = document.getElementById('hamburger-menu');
-const HAMBURGER_CLASS_TOP = 'top';
-const HAMBURGER_CLASS_BOTTOM = 'bottom';
+const HAMBURGER_MENU_CLASS_TOP = 'top';
+const HAMBURGER_MENU_CLASS_BOTTOM = 'bottom';
 const HAMBURGER_CLASS_IN_HEADER = 'in-header';
 const HAMBURGER_CLASS_OUT_HEADER = 'out-header';
 
@@ -18,6 +18,7 @@ const X = document.getElementById('x');
 const NAV = document.getElementById('header-nav');
 
 const MENU = document.querySelector('.menu');
+const MENU_ENTRIES = document.getElementsByClassName('menu-entry');
 
 const SEL_FOOTER_CONTENT = 'footer-content';
 
@@ -34,13 +35,14 @@ export {
   SEL_HEADER_CONTENT,
   SEL_HAMBURGER,
   HAMBURGER,
-  HAMBURGER_CLASS_TOP,
-  HAMBURGER_CLASS_BOTTOM,
+  HAMBURGER_MENU_CLASS_TOP,
+  HAMBURGER_MENU_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
   X,
   NAV,
   MENU,
+  MENU_ENTRIES,
   SEL_FOOTER_CONTENT,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,

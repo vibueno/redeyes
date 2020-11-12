@@ -7,12 +7,13 @@ import {
   SEL_HEADER_CONTENT,
   SEL_HAMBURGER,
   HAMBURGER,
-  HAMBURGER_CLASS_TOP,
-  HAMBURGER_CLASS_BOTTOM,
+  HAMBURGER_MENU_CLASS_TOP,
+  HAMBURGER_MENU_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
   X,
   NAV,
+  MENU_ENTRIES,
   SEL_FOOTER_CONTENT,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,
@@ -25,21 +26,37 @@ import {
 let functions = {
 
   /**
-   * @description Sets hamburger button style and position.
+   * @description Sets hamburger button and menu style and position.
    */
-  setHamburger: function() {
+  setHamburgerMenu: function() {
 
     //Sets style of hamburger button
     if (((window.innerHeight + window.pageYOffset) >= (BODY.offsetHeight/1.75))) {
       window.setTimeout( function() {
-        HAMBURGER.classList.remove(HAMBURGER_CLASS_TOP);
-        HAMBURGER.classList.add(HAMBURGER_CLASS_BOTTOM);
+        HAMBURGER.classList.remove(HAMBURGER_MENU_CLASS_TOP);
+        HAMBURGER.classList.add(HAMBURGER_MENU_CLASS_BOTTOM);
+        NAV.classList.remove(HAMBURGER_MENU_CLASS_TOP);
+        NAV.classList.add(HAMBURGER_MENU_CLASS_BOTTOM);
+
+        Array.prototype.forEach.call(MENU_ENTRIES, menuEntry => {
+          menuEntry.classList.remove(HAMBURGER_MENU_CLASS_TOP);
+          menuEntry.classList.add(HAMBURGER_MENU_CLASS_BOTTOM);
+        });
+
       }, 100);
     }
     else {
       window.setTimeout( function() {
-        HAMBURGER.classList.remove(HAMBURGER_CLASS_BOTTOM);
-        HAMBURGER.classList.add(HAMBURGER_CLASS_TOP);
+        HAMBURGER.classList.remove(HAMBURGER_MENU_CLASS_BOTTOM);
+        HAMBURGER.classList.add(HAMBURGER_MENU_CLASS_TOP);
+        NAV.classList.remove(HAMBURGER_MENU_CLASS_BOTTOM);
+        NAV.classList.add(HAMBURGER_MENU_CLASS_TOP);
+
+        Array.prototype.forEach.call(MENU_ENTRIES, menuEntry => {
+          menuEntry.classList.remove(HAMBURGER_MENU_CLASS_BOTTOM);
+          menuEntry.classList.add(HAMBURGER_MENU_CLASS_TOP);
+        });
+
       }, 100);
     }
 
@@ -56,21 +73,21 @@ let functions = {
   },
 
   /**
-   * @description Shows the back to top button.
-   * @param {Node} button HTML node of the button to be shown.
+   * @description Shows an HTML node.
+   * @param {Node} HTMLNode HTML node of the button to be shown.
    */
-  showNode: function (button) {
-    button.classList.remove(NODE_CLASS_HIDDEN);
-    button.classList.add(NODE_CLASS_VISIBLE);
+  showNode: function (HTMLNode) {
+    HTMLNode.classList.remove(NODE_CLASS_HIDDEN);
+    HTMLNode.classList.add(NODE_CLASS_VISIBLE);
   },
 
   /**
-   * @description Hides a button.
-   * @param {Node} button HTML node of the button to be hidden.
+   * @description Hides an HTML node.
+   * @param {Node} HTMLNode HTML node of the button to be hidden.
    */
-  hideNode: function (button) {
-    button.classList.remove(NODE_CLASS_VISIBLE);
-    button.classList.add(NODE_CLASS_HIDDEN);
+  hideNode: function (HTMLNode) {
+    HTMLNode.classList.remove(NODE_CLASS_VISIBLE);
+    HTMLNode.classList.add(NODE_CLASS_HIDDEN);
   },
 
   /**

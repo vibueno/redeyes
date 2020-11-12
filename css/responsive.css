@@ -111,16 +111,20 @@
     height: 100%;
   }
 
-  nav ul li {
+  .menu-entry {
     margin: 0;
     padding: 6px 0 0 0;
     height: 100%;
   }
 
-  nav ul li:hover {
+  .menu-entry:hover {
     padding: 5px 0 0 0;
-    background-color: var(--yellow);
     transform: scale(1.1);
+    color: var(--black);
+  }
+
+  .menu-entry.top:hover {
+    background-color: var(--yellow);
     color: var(--black);
   }
 

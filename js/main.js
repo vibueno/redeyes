@@ -15,6 +15,7 @@ window.onload = function(){
 
   let backtoTopPushed = false;
 
+  functions.setHamburgerMenu();
   functions.setBackToTopPosition();
   functions.setBackToTopVisibility();
 
@@ -34,7 +35,7 @@ window.onload = function(){
         functions.setBackToTopVisibility();
       }
 
-      functions.setHamburger();
+      functions.setHamburgerMenu();
     }, false);
   });
 
