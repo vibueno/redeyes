@@ -14,6 +14,8 @@
 ## Description
 This project was developed during the preparation for the Full-Stack Web & App Development Bootcamp at [WBS](https://www.wbscodingschool.com/).
 
+![](img/demo.gif)
+
 ## Live
 For a live version of Red Eyes, visit [GitHub Pages](https://vibueno.github.io/redeyes).
 
