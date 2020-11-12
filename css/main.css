@@ -148,12 +148,6 @@ nav ul li {
   cursor:pointer;
 }
 
-nav ul li:hover {
-  background-color: var(--yellow);
-  font-size: 1.2em;
-  color: var(--black);
-}
-
 h3 {
   margin: 0 0 1em 0;
   padding: 0;
