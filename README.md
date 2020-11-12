@@ -1,4 +1,4 @@
-# Blog
+# Red Eyes
 
 ## Table of Contents
 - [Description](#description)
