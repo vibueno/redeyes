@@ -3,8 +3,8 @@
  * Sizes in this stylesheet are optimized for mini smarphones.
  * We use the file responsive.css to build up on this and
  * make the page look good on bigger devices too
- *
- */
+
+* */
 
  /*
   *
@@ -45,10 +45,17 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.visible {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
 .hamburger {
   position: fixed;
-  z-index: 30;
-  display: inline-block;
+  z-index: 6;
   border: 2px solid var(--black);
   width: 35px;
   height: auto;
@@ -71,6 +78,16 @@ body {
 
 .hamburger.bottom {
   background-color: var(--red);
+}
+
+.x {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 6;
+  width: 33px;
+  height: auto;
+  cursor: pointer;
 }
 
 header,
@@ -98,6 +115,7 @@ h2,
 
 header {
   position: relative;
+  z-index: 5;
   align-items: start;
   margin: 0 0 150px 0;
   font-size: 1em;
@@ -143,9 +161,42 @@ h2 {
   font-size: 0.75em;
 }
 
+nav {
+  z-index: 30;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-800px, 0);
+  transform: translate(-800px, 0);
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  background-color: var(--yellow);
+  font-size: 2em;
+  color: var(--black);
+}
+
+nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 nav ul li {
-  visibility: hidden;
+  margin: 0.5em;
+  padding: 10px 0 0 0;
   cursor:pointer;
+}
+
+nav ul li:hover {
+  background-color: var(--black);
+  color: var(--yellow);
 }
 
 h3 {
@@ -254,7 +305,7 @@ footer a:hover {
 
 .back-to-top {
   position: fixed;
-  z-index: 31;
+  z-index: 2;
   display: inline-block;
   border: 2px solid var(--black);
   width: 35px;

@@ -13,14 +13,21 @@ const HAMBURGER_CLASS_BOTTOM = 'bottom';
 const HAMBURGER_CLASS_IN_HEADER = 'in-header';
 const HAMBURGER_CLASS_OUT_HEADER = 'out-header';
 
+const X = document.getElementById('x');
+
+const NAV = document.getElementById('header-nav');
+
+const MENU = document.querySelector('.menu');
+
 const SEL_FOOTER_CONTENT = 'footer-content';
 
 const SEL_BACK_TO_TOP = 'back-to-top';
 const BACK_TO_TOP = document.getElementById('back-to-top');
-const BACK_TO_TOP_CLASS_VISIBLE = 'visible';
-const BACK_TO_TOP_CLASS_HIDDEN = 'hidden';
 const BACK_TO_TOP_CLASS_IN_FOOTER = 'in-footer';
 const BACK_TO_TOP_CLASS_OUT_FOOTER = 'out-footer';
+
+const NODE_CLASS_VISIBLE = 'visible';
+const NODE_CLASS_HIDDEN = 'hidden';
 
 export {
   BODY,
@@ -31,11 +38,14 @@ export {
   HAMBURGER_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
+  X,
+  NAV,
+  MENU,
   SEL_FOOTER_CONTENT,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,
-  BACK_TO_TOP_CLASS_VISIBLE,
-  BACK_TO_TOP_CLASS_HIDDEN,
   BACK_TO_TOP_CLASS_IN_FOOTER,
-  BACK_TO_TOP_CLASS_OUT_FOOTER
+  BACK_TO_TOP_CLASS_OUT_FOOTER,
+  NODE_CLASS_VISIBLE,
+  NODE_CLASS_HIDDEN
 };

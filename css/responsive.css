@@ -19,6 +19,10 @@
     font-size: 1.8em;
   }
 
+  nav {
+    font-size: 2.75em;
+  }
+
   h2 {
     font-size: 0.9em;
   }
@@ -32,6 +36,10 @@
 @media screen and (min-width:500px) {
   h1 {
     font-size: 2em;
+  }
+
+  nav {
+    font-size: 3.25em;
   }
 
   h2 {
@@ -63,8 +71,9 @@
     border: 5px solid var(--white);
   }
 
-  .hamburger {
-    visibility: hidden;
+  .hamburger,
+  .x {
+    display: none;
   }
 
   h1 {
@@ -79,13 +88,17 @@
   }
 
   nav {
+    position: relative;
     align-self: end;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
     margin: 0;
     padding: 0;
     height: 1.5em;
     border-top: 1px dashed var(--white);
+    background-color: var(--black);
+    color: var(--white);
     font-size: 0.6em;
-    text-align: center;
     text-transform: uppercase;
   }
 
@@ -95,13 +108,11 @@
     display: grid;
     margin: 0;
     border: 0;
-    padding: 0;
     height: 100%;
-    list-style-type: none;
   }
 
   nav ul li {
-    visibility: visible;
+    margin: 0;
     padding: 6px 0 0 0;
     height: 100%;
   }
@@ -109,7 +120,7 @@
   nav ul li:hover {
     padding: 5px 0 0 0;
     background-color: var(--yellow);
-    font-size: 1.2em;
+    transform: scale(1.1);
     color: var(--black);
   }
 

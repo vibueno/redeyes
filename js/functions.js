@@ -11,19 +11,21 @@ import {
   HAMBURGER_CLASS_BOTTOM,
   HAMBURGER_CLASS_IN_HEADER,
   HAMBURGER_CLASS_OUT_HEADER,
+  X,
+  NAV,
   SEL_FOOTER_CONTENT,
   SEL_BACK_TO_TOP,
   BACK_TO_TOP,
-  BACK_TO_TOP_CLASS_VISIBLE,
-  BACK_TO_TOP_CLASS_HIDDEN,
   BACK_TO_TOP_CLASS_IN_FOOTER,
-  BACK_TO_TOP_CLASS_OUT_FOOTER
+  BACK_TO_TOP_CLASS_OUT_FOOTER,
+  NODE_CLASS_VISIBLE,
+  NODE_CLASS_HIDDEN
 } from './constants.js';
 
 let functions = {
 
   /**
-   * @description Sets hamburger button style and position
+   * @description Sets hamburger button style and position.
    */
   setHamburger: function() {
 
@@ -54,41 +56,43 @@ let functions = {
   },
 
   /**
-   * @description Shows the back to top button
+   * @description Shows the back to top button.
+   * @param {Node} button HTML node of the button to be shown.
    */
-  showBackToTop: function () {
-    BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_HIDDEN);
-    BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_VISIBLE);
+  showNode: function (button) {
+    button.classList.remove(NODE_CLASS_HIDDEN);
+    button.classList.add(NODE_CLASS_VISIBLE);
   },
 
   /**
-   * @description Hides the back to top button
+   * @description Hides a button.
+   * @param {Node} button HTML node of the button to be hidden.
    */
-  hideBackToTop: function () {
-    BACK_TO_TOP.classList.remove(BACK_TO_TOP_CLASS_VISIBLE);
-    BACK_TO_TOP.classList.add(BACK_TO_TOP_CLASS_HIDDEN);
+  hideNode: function (button) {
+    button.classList.remove(NODE_CLASS_VISIBLE);
+    button.classList.add(NODE_CLASS_HIDDEN);
   },
 
   /**
-   * @description Sets the visibility of the back to top button
+   * @description Sets the visibility of the back to top button.
    */
   setBackToTopVisibility: function () {
 
     if (((window.innerHeight + window.pageYOffset) >= (BODY.offsetHeight/1.75))) {
       window.setTimeout( function() {
-        functions.showBackToTop();
+        functions.showNode(BACK_TO_TOP);
       }, 100);
 
     }
     else {
       window.setTimeout( function() {
-        functions.hideBackToTop();
+        functions.hideNode(BACK_TO_TOP);
       }, 100);
     }
   },
 
   /**
-   * @description Sets the position of the back to top button
+   * @description Sets the position of the back to top button.
    */
   setBackToTopPosition: function () {
 
@@ -128,11 +132,31 @@ let functions = {
   },
 
   /**
-   * @description Scrolls to the top of the page
+   * @description Scrolls to the top of the page.
    *
    */
   scrollToTop: function () {
     window.scrollTo(0, 0);
+  },
+
+  /**
+   * @description Opens the side menu (small viewports).
+   */
+  openMenu: function () {
+    NAV.classList.add('open');
+    functions.hideNode(HAMBURGER);
+    functions.showNode(X);
+    functions.setBackToTopVisibility();
+  },
+
+  /**
+    * @description Closes the side menu (small viewports).
+    */
+  closeMenu: function () {
+    NAV.classList.remove('open');
+    functions.showNode(HAMBURGER);
+    functions.hideNode(X);
+    functions.setBackToTopVisibility();
   }
 
 };
