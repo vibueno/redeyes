@@ -18,7 +18,7 @@ This project was developed during the preparation for the Full-Stack Web & App D
 For a live version of Red Eyes, visit [GitHub Pages](https://vibueno.github.io/redeyes).
 
 ## Design
-* Mobile first: the styles included in the file styles.css are optimized for a minimum width of 240px. The file responsiveness.css builds on styles.css by providing additional styles which make the site work correctly on bigger viewports.
+* Mobile first: the styles included in the main stylesheet are optimized for a minimum width of 240px. The file responsive.css builds on it by providing additional styles which make the site work correctly on bigger viewports.
 
 ## Programming
 * **Fully responsive** (starting at 240px Unihertz of Jelly Pro, as fas as I know the smallest Smartphone widely available)
@@ -36,6 +36,7 @@ For a live version of Red Eyes, visit [GitHub Pages](https://vibueno.github.io/r
 * [JavaScript (JSHint)](https://jshint.com)
 
 ## Libraries
+No libraries have been used for this project. Only vanilla JS.
 
 ## Usage
 
