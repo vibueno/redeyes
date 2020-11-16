@@ -68,9 +68,19 @@ window.onload = function(){
    * @description Closes the side menu.
    *
    */
-  [MENU, X].forEach(item => {
-    item.addEventListener('click',  function() {
+
+  MENU.addEventListener('click',  function() {
+    if (event.target.tagName==='LI') {
       functions.closeMenu();
-    });
+    }
+  });
+
+  /**
+   * @description Closes the side menu.
+   *
+   */
+
+  X.addEventListener('click',  function() {
+    functions.closeMenu();
   });
 };
