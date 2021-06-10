@@ -1,8 +1,4 @@
-import {
-  HAMBURGER,
-  X,
-  MENU,
-  BACK_TO_TOP } from './constants.js';
+import { HAMBURGER, X, MENU, BACK_TO_TOP } from './constants.js';
 import { functions } from './functions.js';
 
 /*
@@ -11,8 +7,7 @@ import { functions } from './functions.js';
  *
  */
 
-window.onload = function(){
-
+window.onload = function() {
   let backtoTopPushed = false;
 
   functions.setHamburgerMenu();
@@ -23,32 +18,33 @@ window.onload = function(){
    * @description Window scroll & resize events handling.
    *
    */
-  ['scroll','resize'].forEach( function(event) {
-    window.addEventListener(event, function() {
+  ['scroll', 'resize'].forEach(function(event) {
+    window.addEventListener(
+      event,
+      function() {
+        if (backtoTopPushed) {
+          backtoTopPushed = window.pageYOffset !== 0;
+        }
 
-      if (backtoTopPushed){
-        backtoTopPushed = (window.pageYOffset!==0);
-      }
+        if (!backtoTopPushed) {
+          functions.setBackToTopPosition();
+          functions.setBackToTopVisibility();
+        }
 
-      if (!backtoTopPushed){
-        functions.setBackToTopPosition();
-        functions.setBackToTopVisibility();
-      }
-
-      functions.setHamburgerMenu();
-    }, false);
+        functions.setHamburgerMenu();
+      },
+      false
+    );
   });
 
   /**
    * @description Click event for Back to top button.
    */
-  BACK_TO_TOP.addEventListener('click',(
-    function() {
-      backtoTopPushed = true;
-      functions.hideNode(BACK_TO_TOP);
-      functions.scrollToTop();
-    })
-  );
+  BACK_TO_TOP.addEventListener('click', function() {
+    backtoTopPushed = true;
+    functions.hideNode(BACK_TO_TOP);
+    functions.scrollToTop();
+  });
 
   /**
    * @description Opens the side menu.
@@ -56,8 +52,7 @@ window.onload = function(){
   HAMBURGER.addEventListener('click', function(e) {
     if (!this.classList.contains('open')) {
       functions.openMenu();
-    }
-    else {
+    } else {
       functions.closeMenu();
     }
 
@@ -69,8 +64,8 @@ window.onload = function(){
    *
    */
 
-  MENU.addEventListener('click',  function() {
-    if (event.target.tagName==='LI') {
+  MENU.addEventListener('click', function() {
+    if (event.target.tagName === 'LI') {
       functions.closeMenu();
     }
   });
@@ -80,7 +75,7 @@ window.onload = function(){
    *
    */
 
-  X.addEventListener('click',  function() {
+  X.addEventListener('click', function() {
     functions.closeMenu();
   });
 };
